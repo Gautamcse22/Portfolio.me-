@@ -7,8 +7,8 @@
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-  --bg-dark:    #0a0a0f;
-  --bg-card:    #0a0a0f;
+  --bg-dark:    #0f172a;
+  --bg-card:    #0f172a;
   --bg-card2:   #1a1a26;
   --border:     rgba(255,255,255,0.06);
   --border-hl:  rgba(124,58,237,0.4);
@@ -171,6 +171,7 @@ body {
   border: 1px solid rgba(16,185,129,0.2); padding: 6px 16px; border-radius: 20px;
   margin-bottom: 20px;
 }
+
 .hero-tag::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: var(--success); animation: pulse 1.5s infinite; }
 @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(0.8)} }
 
@@ -263,6 +264,9 @@ body {
   background: linear-gradient(135deg, var(--bg-card2), rgba(124,58,237,0.1));
   border-radius: var(--radius-lg); border: 1px solid var(--border);
   overflow: hidden; display: flex; align-items: center; justify-content: center;
+}
+#about .section-title {
+  font-family: 'Outfit', sans-serif;
 }
 .about-img {
   width: 100%;

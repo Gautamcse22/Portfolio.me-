@@ -60,6 +60,27 @@ document.addEventListener('DOMContentLoaded', () => {
   // ===========================
   const heroAnimEls = document.querySelectorAll('.animate-up, .animate-right');
   setTimeout(() => heroAnimEls.forEach(el => el.classList.add('in')), 200);
+  
+const text = "Software Developer";
+let index = 0;
+
+function typeEffect() {
+  const element = document.getElementById("typing-text");
+
+  element.textContent = text.substring(0, index++);
+  
+  if (index === text.length + 1) {
+    setTimeout(() => {
+      element.textContent = ""; // instant clear
+      index = 0;
+      typeEffect();
+    }, 2000); // ⏸️ rukne ka time
+  } else {
+    setTimeout(typeEffect, 150); // typing speed
+  }
+}
+
+typeEffect();
 
   // ===========================
   // 4. SCROLL REVEAL
